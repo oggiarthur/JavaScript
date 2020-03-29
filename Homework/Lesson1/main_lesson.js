@@ -1,69 +1,3 @@
-// console.log("Hello world");
-
-// string
-// number
-// boolean
-// undefined
-// null
-// object
-
-// var name = 'Ivan';
-// name = 35345;
-
-// console.log(x);
-// var x = 10;
-
-// console.log(x);
-// let x = 10;
-
-// const x = 10;
-// x = 20;
-
-// let word1 = "Hello";
-// let word2 = " world";
-
-// let a = 10;
-// let b = 20;
-
-// console.log(a + b);
-// console.log(word1 + b);
-// console.log(a - b);
-// console.log(word1 - word2);
-// console.log(word1 - b);
-// console.log(word1 * b);
-// console.log(word1 / b);
-
-// let x = 10;
-// let y = "20";
-// console.log(x + +y);
-
-// let a = 9;
-// a++;
-// a = a + 1;
-// console.log(a);
-// console.log(a++);
-// console.log(a);
-
-// console.log(a);
-// console.log(--a);
-// console.log(a);
-
-// let x = 10;
-// // x = x + 5;
-// x += 5;
-// console.log(x);
-
-// console.log(2 > 2);
-// console.log(2 <= 2);
-// console.log(2 == 2);
-// console.log(2 == "2");
-// console.log(2 === "2");
-// console.log("a" < "z");
-// console.log("Ab" < "Ac");
-// console.log("Acsdfsdf" > "Ac");
-// console.log("a" > "A");
-// console.log(undefined === 0);
-
 // let age = 30;
 
 // if (age >= 18) {
@@ -141,3 +75,20 @@
 // }
 
 // alert(price)
+
+let mem = prompt ("Какой размер памяти Вам нужен? 64GB 128GB 256GB");
+console.log (mem);
+console.log(NaN === NaN);
+if (mem === null || !+mem) {
+  console.log("Неккоректный ввод");
+} else {
+  if (+mem == 64 ) {
+    alert("300$");
+  } else if (+mem== 128) {
+    alert("500$");
+  } else if (+mem== 256) {
+    alert("700$");
+  } else {
+    alert("выберите один из 3 вариантов 64, 128, 256"); 
+  }
+}
