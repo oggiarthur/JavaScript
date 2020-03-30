@@ -14,7 +14,10 @@ let mem = prompt ("Какой размер памяти Вам нужен? 64 и
 console.log (mem);
 console.log(NaN === NaN);
 let price=0;
-if (mem === null || !+mem) {
+if (mem === null){
+    break;
+}
+if (!+mem) {
   console.log("Неккоректный ввод");
   alert("Вы ничего не ввели или ввели строку ");
  
