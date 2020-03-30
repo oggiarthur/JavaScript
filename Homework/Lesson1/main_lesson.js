@@ -10,28 +10,28 @@
 // 256GB - 700$
 
 
-// for (let counter = 0; counter <15; counter++){
 // let mem = prompt ("Какой размер памяти Вам нужен? 64 или 128 или 256", " ");
 // console.log (mem);
 // console.log(NaN === NaN);
+// let price=0;
 // if (mem === null || !+mem) {
 //   console.log("Неккоректный ввод");
 //   alert("Вы ничего не ввели или ввели строку ");
-//   continue;
+ 
 // } else {
+
 //   if (+mem == 64 ) {
-//     alert("300$");
-//     break;
-//   } else if (+mem== 128) {
-//     alert("500$");
-//     break;
+//     price=300;
+//     } else if (+mem== 128) {
+//     price=500;   
 //   } else if (+mem== 256) {
-//     alert("700$");
-//     break;
+//     price=700;    
 //   } else {
 //     alert("выберите один из 3 вариантов 64, 128, 256"); 
 //   }
 // }
+// if(price!=0){
+// alert('Цена телефона: ' + price + '$')
 // }
 
 
@@ -43,17 +43,18 @@
 
 // let color = prompt ("Какой цвет телефона вас интересует? \n    \nБелый(White) \nЧерный(Black) \nЗеленый(Green) \nКрасный(Red) \nЖелтый(Yellow) \nПурпурный(Purple)",);
 // if (color==="Белый"  || color==="White"){
-// document.write("<img src='img/White.png' alt='' ");
-//     } else if (color==="Черный" || color==="Black"){
-//     document.write("<img src='img/Black.png' alt='' ");
+//     imageUrl = "White.png";
+//     } else if (color==="Черный" || color==="Black" ){
+//         imageUrl = "Black.png";
 //       } else if (color==="Зеленый" || color==="Green"){
-//     document.write("<img src='img/Green.png' alt='' ");
+//         imageUrl = "Green.png";
 //         } else if (color==="Красный" || color==="Red"){
-//     document.write("<img src='img/Red.png' alt='' ");
+//             imageUrl = "Red.png";
 //         } else if (color==="Желтый" || color==="Yellow"){
-//     document.write("<img src='img/Yellow.png' alt='' ");
+//             imageUrl = "Yellow.png";
 //         }  else if (color==="Пурпурный" || color==="Purple"){
-//     document.write("<img src='img/Purple.png' alt='' ");
+//             imageUrl = "Purple.png";
 //         } else{
 //     document.write("У нас нет такого цвета");
 //     }
+//  document.write('<img src=img/'+ imageUrl + '  alt=');
