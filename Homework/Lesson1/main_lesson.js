@@ -9,35 +9,35 @@
 // 128GB - 500$
 // 256GB - 700$
 
-while (true){
-let mem = prompt ("Какой размер памяти Вам нужен? 64 или 128 или 256", " ");
-console.log (mem);
-console.log(NaN === NaN);
-let price=0;
-if (mem === null){
-    break;
-}
-if (!+mem) {
-  console.log("Неккоректный ввод");
-  alert("Вы ничего не ввели или ввели строку ");
+// while (true){
+// let mem = prompt ("Какой размер памяти Вам нужен? 64 или 128 или 256", " ");
+// console.log (mem);
+// console.log(NaN === NaN);
+// let price=0;
+// if (mem === null){
+//     break;
+// }
+// if (!+mem) {
+//   console.log("Неккоректный ввод");
+//   alert("Вы ничего не ввели или ввели строку ");
  
-} else {
+// } else {
 
-  if (+mem == 64 ) {
-    price=300;    
-    } else if (+mem== 128) {
-    price=500;     
-  } else if (+mem== 256) {
-    price=700;       
-  } else {
-    alert("выберите один из 3 вариантов 64, 128, 256"); 
-  }
-}
-if(price!=0){
-alert('Цена телефона: ' + price + '$');
-break
-}
-}
+//   if (+mem == 64 ) {
+//     price=300;    
+//     } else if (+mem== 128) {
+//     price=500;     
+//   } else if (+mem== 256) {
+//     price=700;       
+//   } else {
+//     alert("выберите один из 3 вариантов 64, 128, 256"); 
+//   }
+// }
+// if(price!=0){
+// alert('Цена телефона: ' + price + '$');
+// break
+// }
+// }
 
 
 // 2 ЗАДАНИЕ
