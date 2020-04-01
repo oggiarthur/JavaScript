@@ -61,13 +61,14 @@ if (!+mem) {
     for(let i=0;i<memories.length; i++){
         if(+mem===memories[i].memory){
         price = memories[i].price;
-        //    } else {
-            // alert("выберите один из 3 вариантов 64, 128, 256");
-          }
+        break;
+        } else {
+            alert("У нас нет такой памяти");
+            break;
+        }
        }
     break;
-}
-   
+   }
 }
 while (price){
     let color = prompt ("Какой цвет телефона вас интересует? \n    \nБелый(White) \nЧерный(Black) \nЗеленый(Green) \nКрасный(Red) \nЖелтый(Yellow) \nПурпурный(Purple)",);
