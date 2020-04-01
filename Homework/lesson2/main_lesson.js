@@ -57,19 +57,19 @@ if (!+mem) {
   console.log("Неккоректный ввод");
   alert("Вы ничего не ввели или ввели строку ");
  
-} else {
+} else if (+mem===64||+mem===128||+mem===256){
     for(let i=0;i<memories.length; i++){
         if(+mem===memories[i].memory){
         price = memories[i].price;
         break;
-        } else {
-            alert("У нас нет такой памяти");
-            break;
-        }
+         }
        }
     break;
+   } else {
+    alert("выберите один из 3 вариантов 64, 128, 256"); 
    }
 }
+
 while (price){
     let color = prompt ("Какой цвет телефона вас интересует? \n    \nБелый(White) \nЧерный(Black) \nЗеленый(Green) \nКрасный(Red) \nЖелтый(Yellow) \nПурпурный(Purple)",);
     if (color === null){
