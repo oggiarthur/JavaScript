@@ -30,7 +30,20 @@
 // Если пользователь ввел корректный объем памяти спрашивать у него цвет телефона
 // Если все введено вверно и пользователь нигде не нажал отмена - выводить (document.write) цену и картинку телефона
 
-
+let memories =[
+    {
+        memory:64,
+        price:300
+    },
+    {
+        memory:128,
+        price:500
+    },
+    {
+        memory:256,
+        price:700
+    }
+    ]
 
 let price=0;
 while (true){
@@ -45,20 +58,16 @@ if (!+mem) {
   alert("Вы ничего не ввели или ввели строку ");
  
 } else {
-    if (+mem === 64 ) {
-    price=300;
-    break;    
-    } else if (+mem=== 128) {
-    price=500;
-    break;     
-    } else if (+mem=== 256) {
-    price=700;
-    break;       
-     }  else {
-        alert("выберите один из 3 вариантов 64, 128, 256");
-     }     
-     
+    for(let i=0;i<memories.length; i++){
+        if(+mem===memories[i].memory){
+        price = memories[i].price;
+        //    } else {
+            // alert("выберите один из 3 вариантов 64, 128, 256");
+          }
+       }
+    break;
 }
+   
 }
 while (price){
     let color = prompt ("Какой цвет телефона вас интересует? \n    \nБелый(White) \nЧерный(Black) \nЗеленый(Green) \nКрасный(Red) \nЖелтый(Yellow) \nПурпурный(Purple)",);
