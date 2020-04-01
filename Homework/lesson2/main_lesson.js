@@ -31,60 +31,60 @@
 // Если все введено вверно и пользователь нигде не нажал отмена - выводить (document.write) цену и картинку телефона
 
 
-// let temp=1;
-// let price=0;
-// while (temp===1){
-// let mem = prompt ("Какой размер памяти Вам нужен? 64 или 128 или 256", " ");
-// console.log (mem);
-// console.log(NaN === NaN);
-// if (mem === null){
-//     break;
-//     }
-// if (!+mem) {
-//   console.log("Неккоректный ввод");
-//   alert("Вы ничего не ввели или ввели строку ");
+
+let price=0;
+while (true){
+let mem = prompt ("Какой размер памяти Вам нужен? 64 или 128 или 256", " ");
+console.log (mem);
+console.log(NaN === NaN);
+if (mem === null){
+    break;
+    }
+if (!+mem) {
+  console.log("Неккоректный ввод");
+  alert("Вы ничего не ввели или ввели строку ");
  
-// } else {
-//     temp=2;
-//     if (+mem === 64 ) {
-//     price=300;
-//     break;    
-//     } else if (+mem=== 128) {
-//     price=500;
-//     break;     
-//     } else if (+mem=== 256) {
-//     price=700;
-//     break;       
-//      }  else {
-//         temp=1;
-//          alert("выберите один из 3 вариантов 64, 128, 256");
-//      }     
+} else {
+    temp=2;
+    if (+mem === 64 ) {
+    price=300;
+    break;    
+    } else if (+mem=== 128) {
+    price=500;
+    break;     
+    } else if (+mem=== 256) {
+    price=700;
+    break;       
+     }  else {
+        temp=1;
+         alert("выберите один из 3 вариантов 64, 128, 256");
+     }     
      
-// }
-// }
-// while (temp===2){
-//     let color = prompt ("Какой цвет телефона вас интересует? \n    \nБелый(White) \nЧерный(Black) \nЗеленый(Green) \nКрасный(Red) \nЖелтый(Yellow) \nПурпурный(Purple)",);
-//     if (color === null){
-//         break;
-//     }
-//     if (color==="Белый"  || color==="White"){
-//             imageUrl = "White.png";
-//             } else if (color==="Черный" || color==="Black" ){
-//                 imageUrl = "Black.png";
-//               } else if (color==="Зеленый" || color==="Green"){
-//                 imageUrl = "Green.png";
-//                 } else if (color==="Красный" || color==="Red"){
-//                     imageUrl = "Red.png";
-//                 } else if (color==="Желтый" || color==="Yellow"){
-//                     imageUrl = "Yellow.png";
-//                 }  else if (color==="Пурпурный" || color==="Purple"){
-//                     imageUrl = "Purple.png";
-//                 } else{
-//                     alert("У нас нет такого телефона");
-//                 }
-//         break;
-// }
-// document.write(`<img src="img/${imageUrl}"  alt=>` + '  Его цена: ' + price + '$');
+}
+}
+while (price){
+    let color = prompt ("Какой цвет телефона вас интересует? \n    \nБелый(White) \nЧерный(Black) \nЗеленый(Green) \nКрасный(Red) \nЖелтый(Yellow) \nПурпурный(Purple)",);
+    if (color === null){
+        break;
+    }
+    if (color==="Белый"  || color==="White"){
+            imageUrl = "White.png";
+            } else if (color==="Черный" || color==="Black" ){
+                imageUrl = "Black.png";
+              } else if (color==="Зеленый" || color==="Green"){
+                imageUrl = "Green.png";
+                } else if (color==="Красный" || color==="Red"){
+                    imageUrl = "Red.png";
+                } else if (color==="Желтый" || color==="Yellow"){
+                    imageUrl = "Yellow.png";
+                }  else if (color==="Пурпурный" || color==="Purple"){
+                    imageUrl = "Purple.png";
+                } else{
+                    alert("У нас нет такого телефона");
+                }
+        break;
+}
+document.write(`<img src="img/${imageUrl}"  alt=>` + '  Его цена: ' + price + '$');
 
 
 
