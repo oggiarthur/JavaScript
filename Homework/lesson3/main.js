@@ -28,32 +28,29 @@
 // var gen2 = sequence(0, 2);
 // console.log(take(gen2, 5)); // [0, 2, 4, 6, 8 ]
 
-let start = prompt ("Please enter start number");
-let step = prompt ("Please enter step value");
-let arr = [];
-n=5;
-let generator = function(start=0, step = 1) {
+let start = prompt ("Please enter start number")||0;
+let step = prompt ("Please enter step value")||1;
+let arr=[];
+let sequence = function(start, step) {
     return function() {
     start+=step;
     return start;
   };
 };
 
-
-let sequence = generator(+start,+step);
-console.log(sequence());
-console.log(sequence());
-console.log(sequence());
-console.log(sequence());
+let generator = sequence(+start,+step);
+let generator2 = sequence(+start,+step);
+console.log(generator());
+console.log(generator());
+console.log(generator());
+console.log(generator());
 console.log ('---------')
-
-let gen = function (sequence,n){
+let n = prompt ("Please enter length of array")||1;
+let take = function (generator2,n){
     for (let i=0; i<n;i++){
-       arr=arr.push(sequence);
+       arr.push(generator2());
+       }
        return arr;
-    }
-
 }
 
-let take= gen(sequence(),n);
-console.log(take());
+console.log(take(generator2,n));
