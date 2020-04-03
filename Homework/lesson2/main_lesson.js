@@ -244,7 +244,7 @@ let phones =[
                 if(+mem===memories[i].memory){
                 price = memories[i].price;
                 break memory;
-            } 
+            }
             
             
         }
