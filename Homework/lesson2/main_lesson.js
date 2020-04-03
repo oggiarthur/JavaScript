@@ -227,8 +227,8 @@ let phones =[
             }
             ]
         
-        let price=0;
-        while (true){
+        
+       memory: while (true){
         let mem = prompt ("Какой размер памяти Вам нужен? 64 или 128 или 256", " ");
         console.log (mem);
         console.log(NaN === NaN);
@@ -238,21 +238,18 @@ let phones =[
         if (!+mem) {
           console.log("Неккоректный ввод");
           alert("Вы ничего не ввели или ввели строку ");
-         
-        } else if (+mem===64||+mem===128||+mem===256){
-            for(let i=0;i<memories.length; i++){
+        }
+
+        for(let i=0;i<memories.length; i++){
                 if(+mem===memories[i].memory){
                 price = memories[i].price;
-                break;
-                 }
-               }
-            break;
-           } else {
-            alert("выберите один из 3 вариантов 64, 128, 256"); 
-           }
+                break memory;
+            } 
+            
+            
         }
-        
-        while (price){
+    } 
+       color: while (price){
             let color = prompt ("Какой цвет телефона вас интересует? \n    \nБелый(White) \nЧерный(Black) \nЗеленый(Green) \nКрасный(Red) \nЖелтый(Yellow) \nПурпурный(Purple)",);
             if (color === null){
                 break;
@@ -261,12 +258,27 @@ let phones =[
             for(let j=0;j<phones.length; j++){
                 if(color===phones[j].color){
                 imageUrl= phones[j].image;
-                price = price + phones[j].price;
+                price += phones[j].price;
                 console.log(price);
+                break color;
                 } 
             }
+        }    
             
-                break;
-        }
-        document.write(`<img src="img/${imageUrl}"  alt=>` + '  Его цена: ' + price + '$');
+    if (price) {
+      document.write(`<h1>Price: ${price}$</h1>`);
+     }
+    if (imageUrl) {
+      document.write(`<img src="img/${imageUrl}">`);
+    }
+    if (!price && !imageUrl) {
+      document.write(`<h1>ПОКА!</h1>`);
+    }
+
+
+
+
+                
+        
+       
         
