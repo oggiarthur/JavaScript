@@ -32,7 +32,7 @@ let start = prompt ("Please enter start number");
 let step = prompt ("Please enter step value");
 if (start===null||step===null ){
     alert ("Bye!")
-    }
+    } 
 let sequence = function(start, step) {
    if (!isNaN(start||step)){
        if (!+start){
@@ -43,12 +43,12 @@ let sequence = function(start, step) {
        }
         return function() {   
          start+=step;
-            return start;
+            return start-step;
         } 
     }
     return alert("You have enetred a string")
     };
-
+    
 
 let generator = sequence(+start,+step);
 let generator2 = sequence(+start,+step);
