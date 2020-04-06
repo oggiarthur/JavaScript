@@ -30,19 +30,23 @@
 
 let start = prompt ("Please enter start number");
 let step = prompt ("Please enter step value");
-
+if (start===null||step===null ){
+    alert ("Bye!")
+    }
 let sequence = function(start, step) {
-    if (!+start){
-        start=0;
-    }
-    if(!+step){
-        step=1;
-    }
-     return function() {   
+   if (!isNaN(start||step)){
+       if (!+start){
+           start=0;
+       }
+       if (!+step){
+           step=1;
+       }
+        return function() {   
          start+=step;
             return start;
         } 
-      
+    }
+    return alert("You have enetred a string")
     };
 
 
@@ -55,7 +59,7 @@ console.log(generator());
 console.log ('---------')
 
 
-if (start && step){
+if (generator2){
 let n = prompt ("Please enter length of array")||1;
 let take = function (generator2,n){
     let arr=[];
