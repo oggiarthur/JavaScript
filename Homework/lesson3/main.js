@@ -30,8 +30,8 @@
 
 let start = prompt ("Please enter start number");
 let step = prompt ("Please enter step value");
-if (start===null||step===null ){
-    alert ("Bye!")
+if (start===null||step===null){
+    alert ("Bye!");
     } 
 let sequence = function(start, step) {
    if (!isNaN(start||step)){
@@ -46,7 +46,7 @@ let sequence = function(start, step) {
             return start-step;
         } 
     }
-    return alert("You have enetred a string")
+    return alert("You have enetred a string");
     };
     
 
