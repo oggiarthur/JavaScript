@@ -28,15 +28,23 @@
 // var gen2 = sequence(0, 2);
 // console.log(take(gen2, 5)); // [0, 2, 4, 6, 8 ]
 
-let start = prompt ("Please enter start number")||0;
-let step = prompt ("Please enter step value")||1;
-let arr=[];
+let start = prompt ("Please enter start number");
+let step = prompt ("Please enter step value");
+
 let sequence = function(start, step) {
-    return function() {
-    start+=step;
-    return start;
-  };
-};
+    if (!+start){
+        start=0;
+    }
+    if(!+step){
+        step=1;
+    }
+     return function() {   
+         start+=step;
+            return start;
+        } 
+      
+    };
+
 
 let generator = sequence(+start,+step);
 let generator2 = sequence(+start,+step);
@@ -45,12 +53,17 @@ console.log(generator());
 console.log(generator());
 console.log(generator());
 console.log ('---------')
+
+
+if (start && step){
 let n = prompt ("Please enter length of array")||1;
 let take = function (generator2,n){
+    let arr=[];
     for (let i=0; i<n;i++){
        arr.push(generator2());
        }
-       return arr;
+       return arr;  
 }
 
 console.log(take(generator2,n));
+}
