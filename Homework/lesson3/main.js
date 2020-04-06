@@ -32,6 +32,9 @@ let start = prompt ("Please enter start number");
 let step = prompt ("Please enter step value");
 
 let sequence = function(start, step) {
+
+    // 1 вариант
+
 //    if (!isNaN(start||step)){
 //        if (!+start){
 //            start=0;
@@ -47,6 +50,10 @@ let sequence = function(start, step) {
 //     return alert("You have enetred a string");
 //     };
 
+
+
+    // 2 вариант
+    
     start = start || 0;
     step = step || 1;
     start -= step;
