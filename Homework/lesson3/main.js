@@ -30,25 +30,30 @@
 
 let start = prompt ("Please enter start number");
 let step = prompt ("Please enter step value");
-if (start===null||step===null){
-    alert ("Bye!");
-    } 
+
 let sequence = function(start, step) {
-   if (!isNaN(start||step)){
-       if (!+start){
-           start=0;
-       }
-       if (!+step){
-           step=1;
-       }
-        return function() {   
-         start+=step;
-            return start-step;
-        } 
+//    if (!isNaN(start||step)){
+//        if (!+start){
+//            start=0;
+//        }
+//        if (!+step){
+//            step=1;
+//        }
+//         return function() {   
+//          start+=step;
+//             return start-step;
+//         } 
+//     }
+//     return alert("You have enetred a string");
+//     };
+
+    start = start || 0;
+    step = step || 1;
+    start -= step;
+    return function() {
+        return start += step;
     }
-    return alert("You have enetred a string");
-    };
-    
+};
 
 let generator = sequence(+start,+step);
 let generator2 = sequence(+start,+step);
